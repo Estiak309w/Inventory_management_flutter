@@ -4,20 +4,31 @@
 
 ＃＃ はじめる
 
-#組み立て方
+# 組み立て方
 
-VScode Lib フォルダーと pubspec.yaml ファイルを使用して実行するには、必要です。
+1. Masterブランチからプロジェクトをクローンする。
+2. Inventory_management_flutter/android/app/src/debug/AndroidManifest.xmlに以下の行を追加する。
+に以下の行を追加する： 
+<uses-permission android:name="android.permission.CAMERA"/>を追加する。
+3. main.dartを実行する。
 
-#論理情報
-1. テーブルは 2 つあります (商品マスターと商品テーブル)。
-2. 商品マスターテーブルは、スキャンしたバーコード番号が商品番号であるかどうかを確認するためのものです。
-3. Product テーブルはデータを保存するためのものです。
-4. バーコード機能は実装されていますが、製品マスターを確認するために統合されていません。 (まだ開発中です)
-5. ユーザーは製品テーブルにデータを保存できません (まだ開発中)
-6. 現在、製品テーブルに保存されている 1 つのデータがメイン画面に表示されています。
-7. 商品マスターテーブルと商品テーブルのCRUD操作を実装しました。
-8. Bloc パターンに従って UI、ロジック、データベースを分離しようとしました。
-2日後よりフルバージョンの提供が可能となります。
+# apkファイルリンク
+Inventory_management_flutter/android/apk_files/inventory_app.apk
+
+# 論理情報
+1. 2つのテーブル（商品マスターと商品テーブル）があります。
+2. 商品マスタテーブルは、スキャンされたバーコード番号が商品番号であるかどうかを確認するためのものです。
+3. 製品テーブルは、データを格納するためのものです。
+4. バーコードは数字のみを検証することができます。
+5. バーコードは、製品マスターテーブルの製品番号を持つその番号を検証することができます。
+6. 製品マスタテーブルに製品番号が存在する場合にのみ、ユーザーは製品テーブルにデータを格納することはできません。
+7.製品がすでに製品テーブルに存在する場合、それはそうでなければ、製品を登録する更新することができます。
+8. 新規商品登録の場合、ユーザーは商品を入力するだけで、商品を発行することはできません。
+9. ユーザーは領収書と領収書発行を選択することができます。
+10. 商品の数量がある場合、ユーザーは商品を発行することができます。
+11. ユーザーは商品テーブルの商品を削除、更新、登録できます。
+
+DeepL.com（無料版）で翻訳しました。
 
 # inventory
 
@@ -27,7 +38,15 @@ A Flutter project about Inventory management system.
 
 # How to build
 
-To run using VScode Lib Folder and pubspec.yaml file is required.
+1. clone the project from Master branch
+2. in Inventory_management_flutter/android/app/src/debug/AndroidManifest.xml 
+add the following line: 
+<uses-permission android:name="android.permission.CAMERA"/>
+3. run the main.dart
+
+# apk file link
+Inventory_management_flutter/android/apk_files/inventory_app.apk
+
 
 # Logical Information
 1. There are two tables (Product master and product table).
