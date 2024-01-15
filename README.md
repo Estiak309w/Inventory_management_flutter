@@ -25,21 +25,24 @@ A Flutter project about Inventory management system.
 
 ## Getting Started
 
-#How to build
+# How to build
 
 To run using VScode Lib Folder and pubspec.yaml file is required.
 
-#Logical Information
+# Logical Information
 1. There are two tables (Product master and product table).
 2. Product master table is for verifying if scanned barcode number is Product number.
 3. Product table is for storing data .
-4. Though Barcode function has been implemented but did not integrated to verify product master. (Still developing)
-5. User can not store data to product table ( Still developing)
-6. Currently, One one data that has been stored in product table is displaying in Main Screen.
-7. Product master table and product table CRUD operation has been implemented.
-8. Tried to follow Bloc pattern to separate UI and logic and Database.
+4. Barcode can validate only numbers.
+5. Barcode can validate that numbers which has product number in product master table.
+6. User can not store data to product table only if product number exist in product master table.
+7. if product already exist in product table then it can be update otherwise register the product.
+8. For new product registration User can only input product not issue product.
+9. User can chose receipts and issue.
+10. If product quantity is available then user can issue the product.
+11. user can delete /update / register product in Product table.
 
-##Product master reference table
+## Product master reference table
 | id | name           | number |
 |----|----------------|--------|
 | 1  | tab            | 12     |
@@ -49,7 +52,7 @@ To run using VScode Lib Folder and pubspec.yaml file is required.
 | 5  | 冷蔵庫         | 309    |
 
 
-#Barcode test case
+## Barcode test case
 | Barcode value | Code type | Comment |
 |---------------|-----------|---------|
 | 12            | Barcode   | 有効    |
