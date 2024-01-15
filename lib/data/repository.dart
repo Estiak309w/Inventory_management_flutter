@@ -31,10 +31,10 @@ class Repository {
   //Read a Single Record By ID
   readDataById(table, itemId) async {
     var connection = await database;
-    return await connection?.query(table, where: 'id=?', whereArgs: [itemId]);
+    return await connection?.query(table, where: 'product_number_mst=?', whereArgs: [itemId]);
   }
 
-  //Update User
+  //Update 
   updateData(table, data) async {
     var connection = await database;
     return await connection
@@ -45,5 +45,16 @@ class Repository {
   deleteDataById(table, itemId) async {
     var connection = await database;
     return await connection?.rawDelete("delete from $table where id=$itemId");
+  }
+
+  dropTable(table) async{
+    var connection = await database;
+    // return await connection?.delete(table);
+    return await connection?.execute('DROP TABLE IF EXISTS $table');
+  }
+
+  getProductByItemNum(table, itemId) async{
+    var connection = await database;
+    return await connection?.query(table, where: 'item_num=?', whereArgs: [itemId]);
   }
 }
