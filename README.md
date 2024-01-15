@@ -28,7 +28,6 @@ Inventory_management_flutter/android/apk_files/inventory_app.apk
 10. 商品の数量がある場合、ユーザーは商品を発行することができます。
 11. ユーザーは商品テーブルの商品を削除、更新、登録できます。
 
-DeepL.com（無料版）で翻訳しました。
 
 # inventory
 
