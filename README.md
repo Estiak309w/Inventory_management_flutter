@@ -13,9 +13,9 @@
 3. main.dartを実行する。
 
 # apkファイルリンク
-Inventory_management_flutter/android/apk_files/inventory_app.apk
+http://tinyurl.com/5fs6n36d
 
-# barcode sample link
+# バーコードサンプルリンク
 Inventory_management_flutter/assets/barcodes
 
 # 論理情報
@@ -47,8 +47,10 @@ add the following line:
 3. run the main.dart
 
 # apk file link
-Inventory_management_flutter/android/apk_files/inventory_app.apk
+http://tinyurl.com/5fs6n36d
 
+# barcode sample link
+Inventory_management_flutter/assets/barcodes
 
 # Logical Information
 1. There are two tables (Product master and product table).
