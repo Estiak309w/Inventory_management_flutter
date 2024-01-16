@@ -15,6 +15,9 @@
 # apkファイルリンク
 Inventory_management_flutter/android/apk_files/inventory_app.apk
 
+# barcode sample link
+Inventory_management_flutter/assets/barcodes
+
 # 論理情報
 1. 2つのテーブル（商品マスターと商品テーブル）があります。
 2. 商品マスタテーブルは、スキャンされたバーコード番号が商品番号であるかどうかを確認するためのものです。
